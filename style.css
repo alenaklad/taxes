@@ -1,46 +1,78 @@
-body {
-    font-family: Arial, sans-serif;
+/* Общие стили */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    box-sizing: border-box;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-h1 {
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7fb;
     color: #333;
 }
 
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    margin: 10px;
-    cursor: pointer;
-    border-radius: 5px;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
 }
 
-button:hover {
-    background-color: #0056b3;
+/* Заголовок */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
 }
 
+/* Кнопки стран */
 .countries {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
     justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
 }
 
 button:focus {
     outline: none;
 }
 
-h2 {
-    color: #555;
+/* Стиль для мобильных устройств */
+@media (max-width: 768px) {
+    .countries {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        width: 80%;
+        font-size: 1.1rem;
+    }
+}
+
+/* Кнопка назад */
+button.back-button {
+    background-color: #2ecc71;
+    margin-top: 30px;
+}
+
+button.back-button:hover {
+    background-color: #27ae60;
 }
